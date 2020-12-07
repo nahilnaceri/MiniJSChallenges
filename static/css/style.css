@@ -1,0 +1,186 @@
+
+/*
+
+    primary-color : #34626c
+    secondary-color : #839b97
+    tertiary-color : #cfd3ce
+    fourth-color : #c6b497
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#header {
+    padding: 3% 10%;
+    height: 60vh;
+    clip-path: polygon(0 0,100% 0 , 100% 80%,0 100%);
+    background-image: 
+    linear-gradient(to right bottom ,
+     rgba(52, 98, 108,.9),
+     rgba(131, 155, 151,.9)),url('../images/jscode.png');
+
+    text-align: center;
+    position: relative;
+}
+.header__container {
+    position: absolute;
+    top :50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.header__icon {
+    color: #c6b497;
+}
+.header__primary-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    display:inline-block;
+    margin: 3% 0;
+    /* width: 80%; */
+    /* padding: 0 0; */
+}
+
+.header__image {
+    width: 5rem;
+}
+
+
+
+#challenge1 {
+    padding: 10% 20%;
+    text-align: center;
+}
+
+
+.challenge__heading {
+    font-size: 2rem;
+    padding: 5px;
+    margin: 30px 0;
+    margin-bottom: 40px;
+}
+
+
+
+/* Buttons */
+
+.btn-outline-success {
+    border-color: #34626c;
+    color: #839b97;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:active{
+    background-color: #34626c;
+    color: #fff;
+    border-color: #839b97;
+}
+.btn-outline-danger {
+    border-color: #c6b497;
+    color: #c6b497;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:active  {
+    background-color: #c6b497;
+    color: #fff;
+    border-color: #cfd3ce;
+}
+
+
+
+
+#challenge2 {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    transition: all .3s;
+}
+
+.challenge2__flex-box{
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    transition:  all .3s;
+}
+.challenge2__flex-box img{
+ padding: 16px;
+ background-color: #c6b497;
+ margin : 15px 0;
+ 
+  
+}
+.challenge2__icon{
+    font-size: 3rem;
+    /* color: #34626c; */
+     
+   }
+
+.challenge2__image {
+    animation-name: animatein;
+    animation-duration: 1s;
+    /* border: 1px solid #c6b497; */
+    transition: all .3s;
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.5);
+    
+    
+
+}
+.challenge2__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 10px;
+    
+    
+
+}
+
+.challenge2__image:hover {
+    transform: scale(1.1);
+    
+    
+
+}
+
+.challenge2__header{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+
+@keyframes animatein {
+    0%{
+        border: none;
+        opacity:0;
+        transform: translateY(-5px) scale(1.5);
+    }
+    80%{
+        opacity: 1;
+        transform: translateY(5px) scale(1.5);
+    }
+    100%{
+        border: 1px solid #c6b497;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media screen  and (max-width : 600px) {
+    .input-group-append {
+        display: block;
+        width: 100%;
+        margin: 20px;
+    }
+    .input-group-append button:not(:last-child) {
+        margin-right: 20px;
+    }
+}
