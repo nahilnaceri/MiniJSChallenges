@@ -33,3 +33,60 @@ document.querySelector("#generator").addEventListener("click",()=>{
 });
 
 
+var myButtonRock = document.getElementById("rock");
+var myButtonPaper = document.getElementById("paper");
+var myButtonsis = document.getElementById("sis");
+
+myButtonRock.addEventListener("click",()=>{
+    document.querySelector("#player-hand").classList.replace(document.querySelector("#player-hand").classList[1],"fa-hand-rock");
+    let result = switchComputerHand("rock");
+    document.getElementById("result").innerHTML = "You "+result;
+
+})
+myButtonPaper.addEventListener("click",()=>{
+    document.querySelector("#player-hand").classList.replace(document.querySelector("#player-hand").classList[1],"fa-hand-paper");
+    let result = switchComputerHand("paper");
+    document.getElementById("result").innerHTML = "You "+result;
+})
+myButtonsis.addEventListener("click",()=>{
+    document.querySelector("#player-hand").classList.replace(document.querySelector("#player-hand").classList[1],"fa-hand-scissors");
+    let result = switchComputerHand("sis");
+    document.getElementById("result").innerHTML = "You "+result;
+})
+
+function switchComputerHand(s) {
+    var random = Math.floor(Math.random() * 3);
+    let myArr = ["rock","sis","paper"];
+    if(myArr[random] === "rock") {
+        document.querySelector("#comp-hand").classList.replace(document.querySelector("#comp-hand").classList[1],"fa-hand-rock");
+        if(s === "rock") {
+            return "tie";
+        }else if(s === "paper") {
+            return "win";
+        }else{
+            return "lost";
+        }
+    }
+    else if(myArr[random] === "sis"){
+        document.querySelector("#comp-hand").classList.replace(document.querySelector("#comp-hand").classList[1],"fa-hand-scissors");
+        if(s === "rock") {
+            return "win";
+        }else if(s === "paper") {
+            return "lost";
+        }else{
+            return "tie";
+        }
+    }else {
+        document.querySelector("#comp-hand").classList.replace(document.querySelector("#comp-hand").classList[1],"fa-hand-paper");
+        if(s === "rock") {
+            return "lost";
+        }else if(s === "paper") {
+            return "tie";
+        }else{
+            return "win";
+        }
+    }
+}
+
+
+

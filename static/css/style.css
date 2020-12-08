@@ -24,6 +24,7 @@
     linear-gradient(to right bottom ,
      rgba(52, 98, 108,.9),
      rgba(131, 155, 151,.9)),url('../images/jscode.png');
+     background-size: cover;
 
     text-align: center;
     position: relative;
@@ -156,6 +157,60 @@
     padding: 10px;
 }
 
+#challenge3 {
+    padding: 5% 10%;
+    text-align: center;
+    background-image: linear-gradient(to right bottom ,
+    rgba(52, 98, 108,.9),
+    rgba(131, 155, 151,.9)),url('../images/jscode.png');
+    background-size: cover;
+}
+.challenge3__heading {
+    color: #fff;
+    margin: 20px 0;
+    margin-bottom: 40px;
+}
+.comp{
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color:#fff;
+    padding: 10px;
+}
+.challenge3__comp{
+    /* display: relative; */
+    border: 3px dashed #c6b497;
+    display: inline-block;
+    padding: 5px;
+}
+.comp,
+.comp-choice{
+    display: block;
+    margin: 0 auto;
+    /* position: absolute; */
+}
+
+.comp-choice {
+    width: 10rem;
+    padding: 5px;
+}
+
+.challenge3__choices{
+    font-size: 10rem;
+    margin-top: -50px;
+}
+
+#rps {
+    border: 10px solid #c6b497;
+}
+#result {
+    font-size: 2rem;
+    color: #fff;
+}
+#comp-hand,
+#player-hand {
+    font-size: 10rem;
+}
 
 @keyframes animatein {
     0%{
